@@ -19,9 +19,6 @@ This project is a web-based visualizer for **Design and Analysis of Algorithms (
 - 🧭 Interactive grid for pathfinding
 - 📊 Easy-to-understand UI for DAA concepts
 
-## 📸 Screenshots
-
-*(Add screenshots here later if needed)*
 
 ## 🌐 GitHub Pages Deployment
 
