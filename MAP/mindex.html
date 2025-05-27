@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Metro Network </title>
+  <link rel="stylesheet" href="mstyle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    /* Basic styles for layout */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    #control-panel {
+      width: 320px;
+      padding: 15px;
+      background: #f9f9f9;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+    #map {
+      flex: 1;
+      height: 100vh;
+      width: calc(100vw - 320px);
+      position: relative;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 6px 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    #time-inputs input {
+      width: 30%;
+      display: inline-block;
+      margin-right: 5%;
+    }
+    #time-inputs input:last-child {
+      margin-right: 0;
+    }
+    button {
+      cursor: pointer;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 1em;
+      border-radius: 3px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div id="control-panel">
+  <h3>🚉 Add Station</h3>
+  <div class="section">
+    <label for="nodeName">Station Name</label>
+    <input id="nodeName" type="text" placeholder="e.g. Central Station" autocomplete="off" />
+    
+    <label for="lat">Latitude</label>
+    <input id="lat" type="number" step="any" placeholder="Latitude" />
+    
+    <label for="lng">Longitude</label>
+    <input id="lng" type="number" step="any" placeholder="Longitude" />
+    
+    <button id="addNodeBtn">Add Station</button>
+  </div>
+
+  <h3>🛤️ Connect Tracks</h3>
+  <div class="section">
+    <label for="startSelect">Start Station</label>
+    <select id="startSelect">
+      <option value="">Select Start</option>
+    </select>
+    
+    <label for="endSelect">End Station</label>
+    <select id="endSelect">
+      <option value="">Select End</option>
+    </select>
+
+    <label for="w1">Distance (km)</label>
+    <input id="w1" type="number" placeholder="Distance in km" />
+
+    <label>Time (HH:MM:SS)</label>
+    <div id="time-inputs">
+      <input id="hh" type="number" min="0" max="23" placeholder="HH" />
+      <input id="mm" type="number" min="0" max="59" placeholder="MM" />
+      <input id="ss" type="number" min="0" max="59" placeholder="SS" />
+    </div>
+
+    <label for="w3">Cost (₹)</label>
+    <input id="w3" type="number" placeholder="e.g. 150" />
+
+    <button id="connectBtn">Connect Stations</button>
+  </div>
+
+  <button id="downloadBtn">📷 Download Map</button>
+  <button id="exportJsonBtn">📁 Export JSON</button>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src="mscript.js"></script>
+
+</body>
+</html>

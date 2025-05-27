@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Metro Route Finder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    select, button {
+      transition: all 0.2s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-100 via-blue-200 to-cyan-100 min-h-screen flex items-center justify-center p-4">
+
+  <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-xl w-full">
+    <h1 class="text-4xl font-extrabold text-center text-blue-800 mb-6 drop-shadow">🚇 Metro Route Finder</h1>
+
+    <div class="space-y-5 text-gray-700">
+      <div>
+        <label for="jsonUpload" class="block font-semibold mb-1">Upload Network JSON</label>
+        <input type="file" id="jsonUpload" accept=".json" class="w-full p-2 border border-blue-200 rounded-md" />
+      </div>
+
+      <div>
+        <label for="source" class="block font-semibold mb-1">Source Station</label>
+        <select id="source" class="w-full p-3 rounded-lg border border-blue-200 focus:ring-2 focus:ring-blue-400"></select>
+      </div>
+
+      <div>
+        <label for="destination" class="block font-semibold mb-1">Destination Station</label>
+        <select id="destination" class="w-full p-3 rounded-lg border border-blue-200 focus:ring-2 focus:ring-blue-400"></select>
+      </div>
+
+      <div>
+        <label for="preference" class="block font-semibold mb-1">Preference</label>
+        <select id="preference" class="w-full p-3 rounded-lg border border-blue-200 focus:ring-2 focus:ring-blue-400">
+          <option value="time">⏱️ Minimum Time</option>
+          <option value="cost">💰 Minimum Cost</option>
+          <option value="stops">🚏 Minimum Stops</option>
+        </select>
+      </div>
+
+      <div class="flex justify-between mt-2">
+        <button onclick="findRoute()" class="flex-1 mr-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg shadow transition hover:scale-105">Find Route</button>
+        <button onclick="resetUI()" class="flex-1 ml-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 rounded-lg shadow transition hover:scale-105">Reset</button>
+      </div>
+
+      <div id="output" class="mt-6 bg-blue-50 border border-blue-100 p-5 rounded-lg text-gray-800 shadow-sm text-sm">
+        <p class="italic text-center text-gray-500">Route details will appear here...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="network-loader.js"></script>
+  <script src="algoritms.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
