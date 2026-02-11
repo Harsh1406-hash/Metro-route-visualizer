@@ -79,3 +79,4 @@ function clearSelection() {
   resultBox.innerHTML =
     '<p class="italic text-center text-gray-500">Select stations to view route details.</p>';
 }
+loadStations();
