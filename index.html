@@ -46,12 +46,19 @@
       </div>
 
       <div class="flex justify-between mt-2">
-        <button onclick="findRoute()" class="flex-1 mr-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg shadow transition hover:scale-105">Find Route</button>
-        <button onclick="resetUI()" class="flex-1 ml-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 rounded-lg shadow transition hover:scale-105">Reset</button>
+        <button onclick="calculateRoute()" class="flex-1 mr-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg shadow transition hover:scale-105">
+  Find Route
+</button>
+
+<button onclick="clearSelection()" class="flex-1 ml-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 rounded-lg shadow transition hover:scale-105">
+  Reset
+</button>
+
       </div>
 
       <div id="output" class="mt-6 bg-blue-50 border border-blue-100 p-5 rounded-lg text-gray-800 shadow-sm text-sm">
         <p class="italic text-center text-gray-500">Route details will appear here...</p>
+        
       </div>
     </div>
   </div>
