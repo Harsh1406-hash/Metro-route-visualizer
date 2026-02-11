@@ -1,38 +1,60 @@
-# 🚀 DAA-Project: Route and Map Visualizer
+# Metro Route Visualizer
 
-This project is a web-based visualizer for **Design and Analysis of Algorithms (DAA)**, demonstrating pathfinding and mapping techniques.
+A graph-based metro route visualization project developed as part of the  
+**Design and Analysis of Algorithms (DAA)** course.
+
+This project demonstrates how graph algorithms can be used to find and
+visualize the shortest path between metro stations.
+
+---
+
+## 🎯 Objectives
+- To apply graph algorithms in a real-world scenario
+- To visualize shortest metro routes interactively
+- To strengthen understanding of DAA concepts
+
+---
+
+## 🚀 Features
+- Metro stations represented as graph nodes
+- Routes represented as weighted edges
+- Shortest path calculation between two stations
+- Simple and interactive UI
+
+---
+
+## 🧠 Algorithms Used
+- Graph (Adjacency List)
+- Dijkstra’s Algorithm / BFS (based on implementation)
+
+---
+
+## 🛠 Technologies Used
+- HTML
+- CSS
+- JavaScript
+
+---
 
 ## 📂 Project Structure
-
-- `/ROUTE`: Contains route visualizer (e.g., Dijkstra's or BFS)
-- `/MAP`: Contains map-based logic and interface
-
-## 🛠️ Technologies Used
-
-- HTML, CSS, JavaScript
-- Basic DOM Manipulation
-- Graph Algorithms
-
-## 🧠 Features
-
-- 📍 Visual representation of routes and maps
-- 🧭 Interactive grid for pathfinding
-- 📊 Easy-to-understand UI for DAA concepts
-
-
-## 🌐 GitHub Pages Deployment
-
-To view it live (once hosted):  
-👉 [Click Here](https://Aadi1104-Ab.github.io/DAA-Project/) *(if GitHub Pages is enabled)*
+- `index.html` – User interface
+- `script.js` – Core algorithm logic
+- `style.css` – Styling
 
 ---
 
-## 🤝 Contributing
-
-Pull requests are welcome. For major changes, please open an issue first.
+## 📚 Academic Use
+This project is created for educational purposes under the  
+**Design and Analysis of Algorithms** subject.
 
 ---
 
-## 📄 License
+## 👤 Author
+**Harshvardhan Singh**  
+B.Tech CSE, Graphic Era Deemed University
 
-MIT License. See `LICENSE` file for details.
+---
+
+## 📌 Note
+This project is inspired by metro route problems commonly used in graph
+algorithm demonstrations and has been customized and implemented independently.
